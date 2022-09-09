@@ -8,6 +8,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
     ProductListComponent,
     ConfirmationPageComponent,
     ProductDetailsComponent,
-    CheckoutFormComponent
+    CheckoutFormComponent,
+    NavBarComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
