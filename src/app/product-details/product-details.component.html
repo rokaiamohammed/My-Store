@@ -1,1 +1,7 @@
-<p>product-details works!</p>
+<div class="product-container ">
+  <a routerLink="/Product-page/{{product.id}}"><img class="product-image" src={{product.url}}></a>
+  <h2>{{product.name}}</h2>
+  <h3>${{product.price}}</h3>
+  <input class="select-input" id="number" type="number" value="1">
+  <button class="select-input">Add to cart</button>
+</div>

@@ -1,0 +1,20 @@
+img {
+  border-radius: 10px;
+  width: 320px;
+}
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
+.cont{
+  display: flex;
+  grid-gap: 50px;
+  margin-top: 64px;
+  /* width:100%; */
+  justify-content: center;
+  align-items: center;
+}
+flex-child{
+  margin-right: 40px ;
+}

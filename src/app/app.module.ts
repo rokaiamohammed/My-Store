@@ -10,6 +10,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     ProductDetailsComponent,
     CheckoutFormComponent,
     NavBarComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
