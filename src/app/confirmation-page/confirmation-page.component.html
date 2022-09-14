@@ -1,1 +1,8 @@
-<p>confirmation-page works!</p>
+<h2>Full Name</h2>
+<input (keyup)="getName($event)" class="select-input"  type="text" placeholder="name">
+<h2>Address</h2>
+<input  (keyup)="getAddress($event)"class="select-input"  type="text" placeholder="minimum 6 char">
+<h2>Credit Card number</h2>
+<input (keyup)="getCredit($event)" class="select-input"  type="number" placeholder="16-digit number">
+<h4>We will never share your payment details with anyone else </h4>
+<button routerLink="/success">Submit</button>

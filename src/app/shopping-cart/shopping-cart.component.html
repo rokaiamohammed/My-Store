@@ -1,1 +1,6 @@
-<p>shopping-cart works!</p>
+<div class="left" >
+<app-products-cart *ngFor="let cart of Cart" [cart]="cart"></app-products-cart>
+</div>
+<app-confirmation-page class="right"></app-confirmation-page>
+
+<h2>{{get_total()}}</h2>

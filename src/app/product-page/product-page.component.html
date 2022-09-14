@@ -6,10 +6,10 @@
   <div class="flex-child">
     <h1>{{products[id-1].name}}</h1>
     <h2>${{products[id-1].price}}</h2>
-    <input class="select-input" id="number" type="number" value="1">
+    <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" id="num" class="select-input" id="number" type="number" value="1">
+    <button class="select-input" (click)="add(products[id-1].id,products[id-1].name,products[id-1].price,products[id-1].url)">Add to cart</button>
     <br>
-    <button class="select-input">Add to cart</button>
-    <a routerLink="/"><h3>Back to product list</h3></a>
+    <button class="select-input" routerLink="/">Back to product list</button>
   </div>
 
 </div>

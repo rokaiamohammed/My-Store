@@ -1,21 +1,15 @@
 .product-image {
   list-style-type: none;
-  width: 290px;
-  padding: 20px;
+  width: 100px;
+  padding: 5px;
   margin: 6px 6px;
   border: 1px solid #3ea18d;
 }
 
 .product-container {
-  margin-top: 64px;
+  margin-top: 20px;
   display:inline-block;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  /* justify-content: flex-start; */
-}
-
-.select-input {
-  width: 108px;
-  margin-bottom: 8px;
 }

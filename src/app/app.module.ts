@@ -7,10 +7,10 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { SuccessComponent } from './success/success.component';
+import { ProductsCartComponent } from './products-cart/products-cart.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +19,10 @@ import { SuccessComponent } from './success/success.component';
     ProductListComponent,
     ConfirmationPageComponent,
     ProductDetailsComponent,
-    CheckoutFormComponent,
     NavBarComponent,
     ProductPageComponent,
-    SuccessComponent
+    SuccessComponent,
+    ProductsCartComponent
   ],
   imports: [
     BrowserModule,
