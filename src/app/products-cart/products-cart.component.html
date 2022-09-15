@@ -2,7 +2,6 @@
   <img class="product-image" src={{cart.url}}>
   <h2>{{cart.name}}</h2>
   <h3>${{cart.price}}</h3>
-  <h3>{{cart.amount}}</h3>
-
+  <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" class="select-input" id="number" type="number" value="{{cart.amount}}">
 </div>
 

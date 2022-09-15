@@ -26,6 +26,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   get_total() {
-    return this.customerService.getTotal();
+    return this.customerService.getTotal().toFixed(2);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { cartProduct } from '../Models/cartProduct';
-
+import { CustomerService } from '../services/customer.service';
 @Component({
   selector: 'app-products-cart',
   templateUrl: './products-cart.component.html',
@@ -8,8 +8,9 @@ import { cartProduct } from '../Models/cartProduct';
 })
 export class ProductsCartComponent implements OnInit {
   @Input() cart:cartProduct;
+  addition:number=0;
 
-  constructor() {
+  constructor(private customerService:CustomerService) {
     this.cart={
       id:0,
       name:'',
@@ -20,6 +21,19 @@ export class ProductsCartComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  onKey(event:any):void{
+    this.addition=event.target.valueAsNumber-this.cart.amount;
+    this.cart.amount=event.target.valueAsNumber;
+    this.customerService.addition(this.addition*this.cart.price);
+  }
+  downKey(event:any){
+
+    this.addition=this.cart.amount-event.target.valueAsNumber;
+    this.cart.amount=event.target.valueAsNumber;
+    this.customerService.addition(this.addition*this.cart.price);
+
+
   }
 
 }

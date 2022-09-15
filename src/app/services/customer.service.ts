@@ -32,4 +32,7 @@ export class CustomerService {
   getTotal(){
     return this.customer.total;
   }
+  addition(inc:number){
+    this.customer.total+=inc;
+  }
 }

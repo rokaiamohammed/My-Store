@@ -1,27 +1,40 @@
-# MyStore
+# My Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+## Name: Rokaia Mohamed
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project called My Store, the project is generated with Angular framework. 
 
-## Code scaffolding
+## Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Project Description 
+* How to use the project
+* How the code works
 
-## Build
+## Project Description 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+My sore is E-store shows list of products and the customer choose what he wants and with the amount he wants.
 
-## Running unit tests
+## How to use the project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+to make sure that the Angular is downloaded
 
-## Running end-to-end tests
+* Insure that Node.js is installed 
+* Insure that npm package manager is installed
+* Install the Angular CLI with this line
+```
+npm install -g @angular/cli
+```
+* Then run this line to launch the Project
+```
+ng serve
+```
+## How the code works
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. open Product list from nav bar
+2. choose any product you can click on its image and go to the chosen product page with its description 
+3. or from the main page 
+4. specify the amount you need 
+5. Go to Cart page form nav bar, there will be the chosen products and the total price for all
+6. fill the information form and click submit  
