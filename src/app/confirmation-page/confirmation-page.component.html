@@ -1,8 +1,53 @@
-<h2>Full Name</h2>
-<input (keyup)="getName($event)" class="select-input"  type="text" placeholder="name">
-<h2>Address</h2>
-<input  (keyup)="getAddress($event)"class="select-input"  type="text" placeholder="minimum 6 char">
-<h2>Credit Card number</h2>
-<input (keyup)="getCredit($event)" class="select-input"  type="number" placeholder="16-digit number">
-<h4>We will never share your payment details with anyone else </h4>
-<button routerLink="/success">Submit</button>
+<form [formGroup]="angForm" novalidate>
+
+  <div class="form-group">
+    <label>Name:</label>
+    <input (keyup)="getName($event)" class="form-control" formControlName="name" type="text" placeholder="name">
+  </div>
+  <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="angForm.controls['name'].errors">
+      Name is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Address:</label>
+    <input required (keyup)="getAddress($event)" type="text" placeholder="minimum 6 char"
+    class="form-control" formControlName="address" minlength="6">
+  </div>
+  <div
+    *ngIf="angForm.controls['address'].invalid&& (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="angForm.controls['address'].errors">
+      email is required.
+    </div>
+    <div *ngIf="angForm.controls['address']?.errors?.['minlength']">
+      the address is less than 6 characters.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Credit Card number:</label>
+    <input required (keyup)="getCredit($event)" type="tel"
+    inputmode="numeric" pattern="[0-9\s]{16,16}"
+     maxlength="16" placeholder="xxxx xxxx xxxx xxxx"
+      class="form-control" formControlName="Credit">
+  </div>
+  <div
+    *ngIf="angForm.controls['Credit'].invalid && (angForm.controls['Credit'].dirty || angForm.controls['Credit'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="angForm.controls['Credit'].errors">
+      Credit Card number is required.
+    </div>
+  </div>
+
+
+  <div class="form-group">
+  <h5>We will never share your payment details with anyone else </h5>
+
+  <button type="submit" routerLink="/success" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+    Submit
+  </button>
+</div>
+</form>

@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { cartProduct } from '../Models/cartProduct';
 import { CustomerService } from '../services/customer.service';
 @Component({
@@ -9,6 +9,7 @@ import { CustomerService } from '../services/customer.service';
 export class ProductsCartComponent implements OnInit {
   @Input() cart:cartProduct;
   addition:number=0;
+  @Output() RemoveProduct:EventEmitter<cartProduct>=new EventEmitter;
 
   constructor(private customerService:CustomerService) {
     this.cart={
@@ -32,8 +33,9 @@ export class ProductsCartComponent implements OnInit {
     this.addition=this.cart.amount-event.target.valueAsNumber;
     this.cart.amount=event.target.valueAsNumber;
     this.customerService.addition(this.addition*this.cart.price);
-
-
+  }
+  Remove(cart:cartProduct){
+    this.RemoveProduct.emit(cart);
   }
 
 }

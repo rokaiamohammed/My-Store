@@ -11,6 +11,7 @@ This project called My Store, the project is generated with Angular framework.
 * Project Description 
 * How to use the project
 * How the code works
+* Updates
 
 ## Project Description 
 
@@ -38,3 +39,11 @@ ng serve
 4. specify the amount you need 
 5. Go to Cart page form nav bar, there will be the chosen products and the total price for all
 6. fill the information form and click submit  
+
+## Updates
+* you can remove items from the cart 
+* you can reduce the amount you need 
+* when you add or remove any item that will be massage displayed shows the item's name added or removed 
+* validate the input form 
+* when you click products from nav bar or click return to the product list the cart will be reset and start from beginning 
+* read the data from HTTPClient 

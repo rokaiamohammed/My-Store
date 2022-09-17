@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../services/customer.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup,FormBuilder,Validators } from '@angular/forms';
 @Component({
   selector: 'app-confirmation-page',
   templateUrl: './confirmation-page.component.html',
@@ -9,15 +11,22 @@ export class ConfirmationPageComponent implements OnInit {
   name:string;
   address:string;
   credit:number;
-  constructor(private customerService:CustomerService)
+  title = 'Angular Form Validation Tutorial';
+  angForm!: FormGroup;
+
+  constructor(
+    private customerService:CustomerService,
+    private fb: FormBuilder
+    )
   {
     this.name='';
     this.address='';
     this.credit=0;
+    this.createForm();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
+
   getName(event:any){
     this.name=event.target.value;
     this.customerService.setName(this.name);
@@ -29,6 +38,13 @@ export class ConfirmationPageComponent implements OnInit {
   getCredit(event:any){
     this.credit=event.target.value;
     this.customerService.setCredit(this.credit);
+  }
+  createForm() {
+    this.angForm = this.fb.group({
+       name: ['', Validators.required ],
+       address: ['', Validators.required ],
+       Credit:['', Validators.required ]
+    });
   }
 
 }

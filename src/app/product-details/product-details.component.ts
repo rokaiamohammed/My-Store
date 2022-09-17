@@ -11,7 +11,8 @@ import { cartProduct } from '../Models/cartProduct';
 export class ProductDetailsComponent implements OnInit {
   @Input() product:Product;
   cart:cartProduct;
-  // @Output() showProduct:EventEmitter<Product>=new EventEmitter;
+  popup = false;
+
   constructor(private productService:ProductsService) {
     this.product={
       id:0,
@@ -48,8 +49,6 @@ export class ProductDetailsComponent implements OnInit {
     this.cart.url=url;
     this.productService.addProducts(this.cart);
   }
-  // show(product:Product):void{
-  //   this.showProduct.emit(product);
-  // }
+
 
 }

@@ -14,6 +14,7 @@ export class ProductPageComponent implements OnInit {
   // @Input() product:Product;
   products:Product[]=[];
   cart:cartProduct;
+  popup = false;
 
   id:number=1;
   constructor(

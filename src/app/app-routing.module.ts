@@ -8,7 +8,8 @@ const routes: Routes = [
   {path:'',component:ProductListComponent},
   {path:'cart',component:ShoppingCartComponent},
   {path:'Product-page/:id',component:ProductPageComponent},
-  {path:'success',component:SuccessComponent}
+  {path:'success',component:SuccessComponent},
+  {path: '**', redirectTo: '/'}
 ];
 
 @NgModule({

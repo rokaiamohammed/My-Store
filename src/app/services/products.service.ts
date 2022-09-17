@@ -8,9 +8,16 @@ export class ProductsService {
 
   constructor() { }
   addProducts(product:cartProduct){
-    this.Products.push(product);
+    if(this.Products.indexOf(product)<0){
+      this.Products.push(product);
+    }else{this.Products[this.Products.indexOf(product)].amount+=1;}
+
   }
   getProducts(){
     return this.Products;
   }
+  resetProducts(){
+    this.Products=[];
+  }
+
 }

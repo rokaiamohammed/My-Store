@@ -5,7 +5,10 @@
   margin: 6px 6px;
   border: 1px solid #3ea18d;
 }
-
+.delete{
+  width: 20px;
+  height: 20px;
+}
 .product-container {
   margin-top: 20px;
   display:inline-block;

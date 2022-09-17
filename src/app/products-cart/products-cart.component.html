@@ -2,6 +2,8 @@
   <img class="product-image" src={{cart.url}}>
   <h2>{{cart.name}}</h2>
   <h3>${{cart.price}}</h3>
-  <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" class="select-input" id="number" type="number" value="{{cart.amount}}">
+  <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" class="select-input" id="number" type="number" value="{{cart.amount}}" min="1">
+  <button  (click)="Remove(cart)" ><img class="delete" src="https://www.svgrepo.com/show/21045/delete-button.svg"></button>
+
 </div>
 

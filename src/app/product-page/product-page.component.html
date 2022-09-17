@@ -6,10 +6,19 @@
   <div class="flex-child">
     <h1>{{products[id-1].name}}</h1>
     <h2>${{products[id-1].price}}</h2>
-    <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" id="num" class="select-input" id="number" type="number" value="1">
-    <button class="select-input" (click)="add(products[id-1].id,products[id-1].name,products[id-1].price,products[id-1].url)">Add to cart</button>
+    <input (mouseup)="onKey($event)" (mousedown)="downKey($event)" id="num" class="select-input" id="number" type="number" value="1" min="1">
+    <button class="select-input" (click)="add(products[id-1].id,products[id-1].name,products[id-1].price,products[id-1].url)" (click)="popup = true">Add to cart</button>
     <br>
     <button class="select-input" routerLink="/">Back to product list</button>
+
   </div>
 
+</div>
+<div class="overlay" *ngIf="popup">
+  <div class="popup">
+      <a class="close" (click)="popup = false">&times;</a>
+      <div class="content">
+      you have added {{cart.amount}} of {{cart.name}}
+      </div>
+  </div>
 </div>
