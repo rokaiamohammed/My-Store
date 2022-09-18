@@ -28,15 +28,16 @@ export class ConfirmationPageComponent implements OnInit {
   ngOnInit(): void { }
 
   getName(event:any){
-    this.name=event.target.value;
+    this.name=event;
+    console.log(this.name);
     this.customerService.setName(this.name);
   }
   getAddress(event:any){
-    this.address=event.target.value;
+    this.address=event;
     this.customerService.setAddress(this.address);
   }
   getCredit(event:any){
-    this.credit=event.target.value;
+    this.credit=event;
     this.customerService.setCredit(this.credit);
   }
   createForm() {

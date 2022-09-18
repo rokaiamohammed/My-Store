@@ -2,7 +2,7 @@
 
   <div class="form-group">
     <label>Name:</label>
-    <input (keyup)="getName($event)" class="form-control" formControlName="name" type="text" placeholder="name">
+    <input [(ngModel)]="name" (ngModelChange)="getName($event)" class="form-control" formControlName="name" type="text" placeholder="name">
   </div>
   <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
     class="alert alert-danger">
@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <label>Address:</label>
-    <input required (keyup)="getAddress($event)" type="text" placeholder="minimum 6 char"
+    <input required (ngModelChange)="getAddress($event)" type="text" placeholder="minimum 6 char"
     class="form-control" formControlName="address" minlength="6">
   </div>
   <div
@@ -29,7 +29,7 @@
 
   <div class="form-group">
     <label>Credit Card number:</label>
-    <input required (keyup)="getCredit($event)" type="tel"
+    <input required (ngModelChange)="getCredit($event)" type="tel"
     inputmode="numeric" pattern="[0-9\s]{16,16}"
      maxlength="16" placeholder="xxxx xxxx xxxx xxxx"
       class="form-control" formControlName="Credit">

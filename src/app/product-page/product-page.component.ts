@@ -46,6 +46,8 @@ export class ProductPageComponent implements OnInit {
     this.cart.price=price;
     this.cart.url=url;
     this.productService.addProducts(this.cart);
+    // this.cart.amount=this.productService.getAmount(this.cart);
+
   }
 
 }
