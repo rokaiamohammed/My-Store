@@ -45,5 +45,5 @@ ng serve
 * you can reduce the amount you need 
 * when you add or remove any item that will be massage displayed shows the item's name added or removed 
 * validate the input form 
-* when you click products from nav bar or click return to the product list the cart will be reset and start from beginning 
+* when you click "return to the product list" from success page the cart will be reset and start from beginning 
 * read the data from HTTPClient 
